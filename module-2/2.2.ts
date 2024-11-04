@@ -50,4 +50,15 @@ interface Roll4 {
 
 const rollNumber4 : Roll4 = [1,2,3]
 
+// declaration of function with the use of interface 
+
+type Add1 = (X: number, Y: number)=> number;
+const add: Add1 = (x,y)=> x + y
+
+interface Add2 {
+    (X: number, Y: number) : number
 }
+const add2: Add2 = (x, y)=> x+y
+
+}
+ 
