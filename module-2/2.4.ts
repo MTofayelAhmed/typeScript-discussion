@@ -27,8 +27,34 @@ const poorDevelper : Developer <Watch>= {
         model: "XCVV",
         display: "LED"
     }
+
 }
 
+
+type AppleWatch = {brand: string;
+    model: string;
+    display : string;
+    heartRate: number;
+    batteryLife: number}
+
+const RichDeveloper : Developer <AppleWatch> = {
+    name: "Jane",
+    computer: {
+        brand : "Apple",
+        model: "MacBook Pro",
+        releaseYear: 2023,
+    },
+    smartWatch: {
+        brand: "samsung",
+        model: "Galaxy Pro",
+        display : "Smart display",
+        heartRate: 2000,
+        batteryLife: 7
+
+    }
+}
+
+// even iof the smartWatch object carries different properties compare to poorDeveloper we can we Same Generic
 
 
 
