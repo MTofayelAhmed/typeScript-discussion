@@ -14,6 +14,9 @@
   const numberGeneric = createArrayWithGeneric<number>(2222);
   const booleanGeneric = createArrayWithGeneric<boolean>(true);
 
+  type User = {id:number; name: string}
+
+  const objectGeneric = createArrayWithGeneric<User>({id: 222, name: "Bangladesh"})
 
 
 
@@ -21,5 +24,6 @@
 
 
 
-  
+
+
 }
