@@ -2,14 +2,15 @@
 //interface with generic 
 
 
-interface Developer<T> {
+interface Developer<T, Y= null> {
     name: string;
     computer : {
         brand: string;
         model: string;
         releaseYear: number;
     };
-    smartWatch : T
+    smartWatch : T;
+    normalWatch ?: Y
 
 }
 
@@ -26,7 +27,8 @@ const poorDevelper : Developer <Watch>= {
         brand: "Apple",
         model: "XCVV",
         display: "LED"
-    }
+    }, 
+   
 
 }
 
@@ -37,7 +39,13 @@ type AppleWatch = {brand: string;
     heartRate: number;
     batteryLife: number}
 
-const RichDeveloper : Developer <AppleWatch> = {
+
+    interface NormalWatch {
+        model: string;
+        display: string;
+    }
+
+const RichDeveloper : Developer <AppleWatch, NormalWatch> = {
     name: "Jane",
     computer: {
         brand : "Apple",
@@ -51,6 +59,10 @@ const RichDeveloper : Developer <AppleWatch> = {
         heartRate: 2000,
         batteryLife: 7
 
+    },
+    normalWatch: {
+        model: "Casio",
+        display: "Smart Display"
     }
 }
 
