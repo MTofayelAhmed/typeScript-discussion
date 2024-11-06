@@ -34,4 +34,5 @@ const getPropertyValue =<X,Y extends keyof X> (object: X, key: Y )=> {
 const result1 = getPropertyValue(user, "name")
 const result2 = getPropertyValue(car, "model")
 
+
 }
