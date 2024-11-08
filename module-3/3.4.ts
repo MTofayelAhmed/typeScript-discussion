@@ -11,4 +11,42 @@
       return param1.toString() + param2.toString();
     }
   };
+
+
+// in Guard use in object . in guard always use in object 
+
+type NormalUSer = {
+    name: string;
+}
+type AdminUser = {
+    name: string;
+    role: string
+}
+
+
+
+const getUser = (user: NormalUSer | AdminUser)=> {
+    if("role" in user ){
+        return {
+            console.log (`this is a ${user.role}`)
+        }
+    }
+    else {
+        return {
+            console.log(`this is Normal user . his name is ${user.name}`)
+        }
+    }
+}
+
+const user1: NormalUSer = {
+    name: "John"
+}
+const user2: AdminUser = {
+    name: "Tofayel",
+    role: "Admin"
+}
+
+
+getUser(user1)
+
 }
