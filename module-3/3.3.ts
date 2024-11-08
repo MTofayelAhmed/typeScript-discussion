@@ -1,7 +1,6 @@
 {
 // inheritence 
-
-class Student {
+class Parents {
     name: string;
     age: number;
     address: string;
@@ -14,10 +13,17 @@ class Student {
     getSleep(Hours: number){
            console.log(`${this.name} will have ${Hours}  Hours`)
         }
-    }
+}
 
 
 
+
+class Student  extends Parents{
+   constructor(name: string, age: number, address: string){
+    super(name, age, address)
+   }
+   }
+    
 
 
 
@@ -26,6 +32,7 @@ class Teacher {
         name: string;
         age: number;
         address: string;
+        designation: string;
         constructor(name: string, age: number, address: string){
             this.name = name ;
             this.age = age ;
