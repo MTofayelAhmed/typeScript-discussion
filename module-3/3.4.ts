@@ -27,14 +27,14 @@ type AdminUser = {
 
 const getUser = (user: NormalUSer | AdminUser)=> {
     if("role" in user ){
-        return {
+        
             console.log (`this is a ${user.role}`)
-        }
+        
     }
     else {
-        return {
+       
             console.log(`this is Normal user . his name is ${user.name}`)
-        }
+        
     }
 }
 
