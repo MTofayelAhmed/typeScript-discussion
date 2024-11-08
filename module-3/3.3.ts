@@ -29,7 +29,7 @@ student1.getSleep(10)
 
 class Teacher extends Parents {
     
-               designation: string;
+         designation: string;
         constructor(name: string, age: number, address: string, designation: string){
          super(name, age, address)
             this.designation = designation
@@ -41,6 +41,9 @@ class Teacher extends Parents {
                 console.log(`Total class ${NumberOfClass}`)
             }
         }
+
+
+        const Teacher1 = new Teacher ("Mr. X", 23, "Uganda", "teacher")
 
      
     
@@ -58,4 +61,3 @@ class Teacher extends Parents {
 
 
 
-}
