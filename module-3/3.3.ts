@@ -24,24 +24,18 @@ class Student  extends Parents{
    }
    }
     
+const student1 = new Student("Tofayel", 25, "Germany")
+student1.getSleep(10)
 
-
-
-class Teacher {
+class Teacher extends Parents {
     
-        name: string;
-        age: number;
-        address: string;
-        designation: string;
-        constructor(name: string, age: number, address: string){
-            this.name = name ;
-            this.age = age ;
-            this.address = address;
+               designation: string;
+        constructor(name: string, age: number, address: string, designation: string){
+         super(name, age, address)
+            this.designation = designation
     
         }
-        getSleep(Hours: number){
-               console.log(`${this.name} will have ${Hours}  Hours`)
-            }
+       
 
             takeClass (NumberOfClass: number){
                 console.log(`Total class ${NumberOfClass}`)
