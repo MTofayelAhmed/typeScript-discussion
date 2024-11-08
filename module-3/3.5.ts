@@ -31,8 +31,16 @@
     }
   }
 
-  const dog = new Dog("German Dog", "dog")
-const cat = new Cat ("Persian Cat", "cat")
+  const getAnimal = (animal: Animal) => {
+    if (animal instanceof Dog) {
+      animal.makeBark();
+    } else if (animal instanceof Cat) {
+      animal.makeMew();
+    }
+  };
 
+  const dog = new Dog("German Dog", "dog");
+  const cat = new Cat("Persian Cat", "cat");
 
+  getAnimal(dog);
 }
