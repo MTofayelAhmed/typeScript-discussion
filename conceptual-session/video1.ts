@@ -49,12 +49,13 @@ function messageType (msg: string| number | DetailLogs){
         console.log(`the message is ${msg}`)
     }
     else if (typeof msg === "number"){
-        console.log()
+        console.log('`this is pure number`')
     }
-    else {
-        console.log()
+    else if ("message" in msg && "level" in msg ) {
+        console.log(`danger level ${msg.level} and the message is ${msg.message}`)
     }
 }
+
 
 
 }
